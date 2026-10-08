@@ -1,0 +1,20 @@
+{
+ "date_utc": "2026-10-08T03:26:48Z",
+ "endpoint": "https://openrouter.ai/api/v1",
+ "forced": false,
+ "models": {
+  "gpt": {
+   "model": "openai/gpt-5.2",
+   "temperature": null
+  },
+  "gemini": {
+   "model": "google/gemini-3.5-flash",
+   "temperature": null
+  },
+  "claude": {
+   "model": "anthropic/claude-sonnet-4.6",
+   "temperature": null
+  }
+ },
+ "sampling": "provider defaults (temperature/reasoning not set)"
+}

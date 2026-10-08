@@ -1,0 +1,108 @@
+1. Fleiss' kappa among three raters (per axis, 5-way incl. No-Persona)
+   all = 300 comments; gold-persona = 184 comments humans judged to carry a persona
+raters                                intent primary_d value_ori    affect     mean
+humans (all)                            0.56      0.58      0.55      0.52     0.55
+batched-chat (all)                      0.17      0.13      0.18      0.22     0.17
+forced (all)                            0.68      0.75      0.67      0.77     0.72
+abstain (all)                           0.64      0.64      0.66      0.65     0.65
+humans (gold-persona)                   0.44      0.46      0.39      0.39     0.42
+batched-chat (gold-persona)             0.18      0.26      0.29      0.24     0.24
+forced (gold-persona)                   0.68      0.77      0.79      0.76     0.75
+abstain (gold-persona)                  0.58      0.59      0.59      0.60     0.59
+
+   No-Persona decision kappa: humans 0.64 | abstain LLMs 0.65
+
+2. No-Persona decision vs adjudicated gold (abstain condition)
+model         abstain%      P      R     F1   kappa
+gpt              44.0%   0.78   0.89   0.83    0.71
+gemini           35.3%   0.92   0.84   0.87    0.80
+claude           33.3%   0.85   0.73   0.79    0.67
+majority         36.0%   0.91   0.84   0.88    0.80
+
+   false abstention on the 184 gold-persona comments: gpt 15.8%, gemini 4.9%, claude 8.2%, majority 5.4%
+
+3. Macro-F1 vs adjudicated gold (NOTE: human rows are NOT independent of gold)
+   [all 300]
+                                      intent primary_d value_ori    affect     mean
+human (mean A,B,C; non-indep.)          0.79      0.80      0.83      0.78     0.80
+batched-chat | gpt                      0.23      0.35      0.39      0.32     0.32
+batched-chat | gemini                   0.29      0.29      0.44      0.30     0.33
+batched-chat | claude                   0.37      0.41      0.41      0.37     0.39
+batched-chat | majority                 0.30      0.45      0.46      0.36     0.39
+forced | gpt                            0.50      0.47      0.51      0.47     0.49
+forced | gemini                         0.51      0.45      0.49      0.46     0.48
+forced | claude                         0.48      0.47      0.50      0.44     0.47
+forced | majority                       0.53      0.48      0.51      0.47     0.50
+abstain | gpt                           0.69      0.66      0.78      0.67     0.70
+abstain | gemini                        0.75      0.72      0.81      0.73     0.75
+abstain | claude                        0.65      0.64      0.75      0.65     0.67
+abstain | majority                      0.74      0.70      0.80      0.72     0.74
+encoder | XLM-R                         0.28      0.31      0.39      0.38     0.34
+encoder | mBERT                         0.27      0.33      0.43      0.33     0.34
+
+   [gold-persona 184]
+                                      intent primary_d value_ori    affect     mean
+human (mean A,B,C; non-indep.)          0.78      0.80      0.83      0.78     0.79
+batched-chat | gpt                      0.36      0.55      0.62      0.48     0.50
+batched-chat | gemini                   0.43      0.45      0.69      0.47     0.51
+batched-chat | claude                   0.56      0.65      0.66      0.58     0.61
+batched-chat | majority                 0.44      0.66      0.73      0.56     0.60
+forced | gpt                            0.72      0.73      0.84      0.76     0.76
+forced | gemini                         0.73      0.70      0.83      0.75     0.75
+forced | claude                         0.71      0.74      0.82      0.71     0.74
+forced | majority                       0.76      0.74      0.84      0.76     0.77
+abstain | gpt                           0.67      0.63      0.79      0.65     0.68
+abstain | gemini                        0.75      0.70      0.83      0.73     0.75
+abstain | claude                        0.66      0.65      0.79      0.67     0.69
+abstain | majority                      0.73      0.68      0.81      0.71     0.73
+encoder | XLM-R                         0.35      0.39      0.53      0.51     0.45
+encoder | mBERT                         0.34      0.43      0.60      0.44     0.45
+
+4a. LOO macro-F1 (reference = agreement of the other two annotators)
+   items per rotation (mean): intent=204, primary_driver=207, value_orientation=208, affect=195
+                                      intent primary_d value_ori    affect     mean
+human (held-out)                        0.72      0.78      0.78      0.73     0.75
+batched-chat | gpt                      0.24      0.35      0.40      0.35     0.34
+batched-chat | gemini                   0.30      0.31      0.47      0.31     0.35
+batched-chat | claude                   0.37      0.45      0.40      0.38     0.40
+batched-chat | majority                 0.31      0.47      0.50      0.39     0.42
+forced | gpt                            0.55      0.53      0.51      0.46     0.51
+forced | gemini                         0.55      0.53      0.49      0.47     0.51
+forced | claude                         0.50      0.49      0.51      0.45     0.49
+forced | majority                       0.58      0.54      0.51      0.47     0.53
+abstain | gpt                           0.80      0.78      0.85      0.76     0.80
+abstain | gemini                        0.84      0.86      0.87      0.84     0.86
+abstain | claude                        0.71      0.74      0.81      0.73     0.75
+abstain | majority                      0.85      0.86      0.88      0.82     0.85
+encoder | XLM-R                         0.29      0.32      0.41      0.41     0.36
+encoder | mBERT                         0.26      0.33      0.46      0.34     0.35
+
+4b. LOO macro-F1, persona-only references (both reference annotators chose a persona)
+   items per rotation (mean): intent=106, primary_driver=109, value_orientation=110, affect=97
+                                      intent primary_d value_ori    affect     mean
+human (held-out)                        0.71      0.80      0.78      0.73     0.75
+batched-chat | gpt                      0.37      0.58      0.68      0.55     0.55
+batched-chat | gemini                   0.45      0.51      0.77      0.53     0.57
+batched-chat | claude                   0.57      0.75      0.69      0.68     0.67
+batched-chat | majority                 0.46      0.73      0.82      0.67     0.67
+forced | gpt                            0.81      0.87      0.89      0.84     0.85
+forced | gemini                         0.82      0.86      0.89      0.87     0.86
+forced | claude                         0.78      0.82      0.90      0.82     0.83
+forced | majority                       0.86      0.89      0.91      0.86     0.88
+abstain | gpt                           0.79      0.77      0.85      0.76     0.79
+abstain | gemini                        0.85      0.86      0.88      0.86     0.86
+abstain | claude                        0.74      0.77      0.86      0.77     0.78
+abstain | majority                      0.85      0.86      0.89      0.83     0.86
+encoder | XLM-R                         0.35      0.42      0.58      0.59     0.49
+encoder | mBERT                         0.34      0.46      0.66      0.49     0.49
+
+5. Per-script LOO mean macro-F1 (4 axes); indicative only for small groups
+                                           latin  roman_nepali    devanagari    code_mixed
+n comments                                   154           114            21            11
+LOO items (mean)                             110            74            11             8
+human (held-out)                            0.73          0.78          0.69          0.84
+batched-chat | majority                     0.38          0.48          0.33          0.24
+forced | majority                           0.46          0.59          0.58          0.47
+abstain | majority                          0.84          0.84          0.88          0.94
+encoder | XLM-R                             0.32          0.38          0.39          0.24
+encoder | mBERT                             0.32          0.38          0.20          0.18

@@ -10,3 +10,6 @@
 
 # regenerable intermediate (rebuild with src/preprocessing/join_llm_labels.py)
 data/pools/_pool_with_llm.csv
+
+# python bytecode
+__pycache__/

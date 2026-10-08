@@ -7,3 +7,7 @@ statsmodels>=0.14
 # Training (GPU)
 torch>=2.1
 transformers>=4.40
+
+# LLM protocols and figure
+openai>=1.0
+matplotlib>=3.7
