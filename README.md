@@ -258,7 +258,7 @@ authors and the platform's terms.
 ```bibtex
 @inproceedings{nepplural2026,
   title     = {{NepPlural}: A Human-Anchored Benchmark for Persona Annotation in {N}epali Migration Discourse},
-  author    = {Nyachhyon, Jinu and Khatiwada, Anish and Timilsina, Bimal and Pandey, Rakhee and Acharya, Ashish},
+  author    = {Nyachhyon, Jinu and Khatiwada, Anish and Timilsina, Bimal},
   booktitle = {Proceedings of the First Workshop on Pluralistic Value Alignment of LLMs (PlurVA-LLM)},
   year      = {2026},
   publisher = {Association for Computational Linguistics}
