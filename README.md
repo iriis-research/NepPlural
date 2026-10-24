@@ -7,10 +7,11 @@ a four-axis persona taxonomy, a **human-adjudicated gold standard**, a **protoco
 audit of LLM annotation**, a five-encoder baseline suite, and a human-judged
 **steerability** evaluation.
 
-Paper: *NepPlural: A Human-Anchored Benchmark for Persona Annotation in Nepali
-Migration Discourse.* Proceedings of the First Workshop on Pluralistic Value
-Alignment of LLMs (PlurVA-LLM), AACL-IJCNLP 2026. Paper link: *forthcoming in the
-ACL Anthology* (a preprint, `NepPlural.pdf`, is included in this repository).
+**Paper:** *NepPlural: A Human-Anchored Benchmark for Persona Annotation in Nepali Migration Discourse.* 
+To appear in the Proceedings of the First Workshop on Pluralistic Value Alignment of LLMs (PlurVA-LLM), AACL-IJCNLP 2026.
+
+**Preprint:** [arXiv:2610.15732](https://arxiv.org/abs/2610.15732) . A copy of the paper (`NepPlural.pdf`) is included in this repository.
+
 
 ## Key findings
 
@@ -256,12 +257,15 @@ authors and the platform's terms.
 ## Citation
 
 ```bibtex
-@inproceedings{nepplural2026,
-  title     = {{NepPlural}: A Human-Anchored Benchmark for Persona Annotation in {N}epali Migration Discourse},
-  author    = {Nyachhyon, Jinu and Khatiwada, Anish and Timilsina, Bimal},
-  booktitle = {Proceedings of the First Workshop on Pluralistic Value Alignment of LLMs (PlurVA-LLM)},
-  year      = {2026},
-  publisher = {Association for Computational Linguistics}
+@misc{nyachhyon2026nepplural,
+  title         = {{NepPlural}: A Human-Anchored Benchmark for Persona Annotation in {N}epali Migration Discourse},
+  author        = {Jinu Nyachhyon and Anish Khatiwada and Bimal Timilsina},
+  year          = {2026},
+  eprint        = {2610.15732},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2610.15732},
+  note          = {To appear in the Proceedings of the First Workshop on Pluralistic Value Alignment of LLMs (PlurVA-LLM), AACL-IJCNLP 2026}
 }
 ```
 
