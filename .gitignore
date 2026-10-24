@@ -13,3 +13,8 @@ data/pools/_pool_with_llm.csv
 
 # python bytecode
 __pycache__/
+
+# presentation drafts
+NepPlural_Slides_with_Speaker_Note.pdf
+NepPlural_Slides_with_Backup.pdf
+NepPlural-PlurVA-LLM_2026_oral.pptx
