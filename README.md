@@ -7,10 +7,10 @@ a four-axis persona taxonomy, a **human-adjudicated gold standard**, a **protoco
 audit of LLM annotation**, a five-encoder baseline suite, and a human-judged
 **steerability** evaluation.
 
-**Paper:** *NepPlural: A Human-Anchored Benchmark for Persona Annotation in Nepali Migration Discourse.* 
-To appear in the Proceedings of the First Workshop on Pluralistic Value Alignment of LLMs (PlurVA-LLM), AACL-IJCNLP 2026.
+**Paper:** [*NepPlural: A Human-Anchored Benchmark for Persona Annotation in Nepali Migration Discourse.*](https://aclanthology.org/2026.plurvallm-1.15/)
+In Proceedings of the First Workshop on Pluralistic Value Alignment of LLMs (PlurVA-LLM), AACL-IJCNLP 2026, pages 197–210, Hengqin, China. Association for Computational Linguistics.
 
-**Preprint:** [arXiv:2610.15732](https://arxiv.org/abs/2610.15732) . A copy of the paper (`NepPlural.pdf`) is included in this repository.
+**ACL Anthology:** [2026.plurvallm-1.15](https://aclanthology.org/2026.plurvallm-1.15/) · **Preprint:** [arXiv:2610.15732](https://arxiv.org/abs/2610.15732). A copy of the published paper (`NepPlural.pdf`) is included in this repository.
 
 
 ## Key findings
@@ -257,15 +257,18 @@ authors and the platform's terms.
 ## Citation
 
 ```bibtex
-@misc{nyachhyon2026nepplural,
-  title         = {{NepPlural}: A Human-Anchored Benchmark for Persona Annotation in {N}epali Migration Discourse},
-  author        = {Jinu Nyachhyon and Anish Khatiwada and Bimal Timilsina},
-  year          = {2026},
-  eprint        = {2610.15732},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.CL},
-  url           = {https://arxiv.org/abs/2610.15732},
-  note          = {To appear in the Proceedings of the First Workshop on Pluralistic Value Alignment of LLMs (PlurVA-LLM), AACL-IJCNLP 2026}
+@inproceedings{nyachhyon-etal-2026-nepplural,
+    title = "{N}ep{P}lural: A Human-Anchored Benchmark for Persona Annotation in {N}epali Migration Discourse",
+    author = "Nyachhyon, Jinu  and
+      Khatiwada, Anish  and
+      Timilsina, Bimal",
+    booktitle = "Proceedings of the First Workshop on Pluralistic Value Alignment of {LLM}s",
+    month = nov,
+    year = "2026",
+    address = "Hengqin, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.plurvallm-1.15/",
+    pages = "197--210"
 }
 ```
 
